@@ -1,5 +1,5 @@
 name: PR Checks
-on: [push, pull_request]
+on: [pull_request]
 
 jobs:
   setup-docker:
@@ -34,4 +34,4 @@ jobs:
         --static-folder="/static" \
         --artifact-folder="/artifact" \
         --ci \
-        --actor="NotNite"
+        --actor="${{ github.actor }}"
