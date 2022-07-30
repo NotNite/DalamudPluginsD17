@@ -2,13 +2,13 @@ name: PR Checks
 on: [pull_request]
 
 jobs:
-  setup-docker:
+  run-plogon:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
       uses: actions/checkout@v3
       with:
-        repository: goatcorp/DalamudPluginsD17
+        repository: NotNite/DalamudPluginsD17
         path: manifests
 
     - name: Create required folders
